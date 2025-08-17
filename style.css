@@ -139,7 +139,7 @@ main {
     padding-bottom: 80px;
 }
 .section-heading {
-    font-size: 2.75rem;
+    font-size: 2.25rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 48px;
@@ -171,7 +171,7 @@ main {
     z-index: -1;
 }
 .about-text .main-heading {
-    font-size: 5.75rem;
+    font-size: 5.25rem;
     font-weight: 700;
     margin-bottom: 16px;
     margin-left: 150px;
@@ -189,7 +189,7 @@ main {
     max-width: 64rem;
     margin-bottom: 32px;
     margin-left: 150px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--text-muted-light);
 }
 .dark .about-text .description {
@@ -522,3 +522,4 @@ main {
         font-size: 1.1rem;
     }
 }
+
