@@ -400,19 +400,15 @@ main {
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
 .dark .social-link {
     color: var(--text-muted-dark);
 }
-
 .social-link:hover {
     color: var(--cyan);
 }
-
 .social-links span {
     color: var(--text-muted-light);
 }
-
 .dark .social-links span {
     color: var(--text-muted-dark);
 }
