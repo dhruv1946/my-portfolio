@@ -30,8 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
-
-    // Close mobile menu when a link is clicked
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -97,4 +95,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('#skills-container .card').forEach(card => {
         observer.observe(card);
     });
+
 });
