@@ -70,6 +70,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     text-decoration: none;
+    padding-left: 16px;
 }
 .header-controls {
     display: flex;
@@ -522,4 +523,5 @@ main {
         font-size: 1.1rem;
     }
 }
+
 
