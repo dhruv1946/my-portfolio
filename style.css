@@ -132,7 +132,7 @@ body {
 .dark .mobile-nav-link:hover {
     background-color: #1f2937;
 }
-main {
+.main {
     padding-top: 72px;
 }
 .content-section {
