@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const moonIcon = document.getElementById('moon-icon');
     const sunIcon = document.getElementById('sun-icon');
     const htmlEL = document.documentElement;
-
     const applyTheme = (theme) => {
         if (theme === 'dark') {
             htmlEL.classList.add('dark');
@@ -15,16 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
             sunIcon.classList.add('hidden');
         }
     };
-
     const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     applyTheme(savedTheme);
-
     themeToggleButton.addEventListener('click', () => {
         const newTheme = htmlEL.classList.contains('dark') ? 'light' : 'dark';
         localStorage.setItem('theme', newTheme);
         applyTheme(newTheme);
     });
-
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenuButton.addEventListener('click', () => {
@@ -36,10 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.add('hidden');
         });
     });
-
     const skillsContainer = document.getElementById('skills-container');
     const projectsContainer = document.getElementById('projects-container');
-
     const skillsData = [
         { name: 'HTML', level: '95%' },
         { name: 'CSS', level: '75%' },
@@ -47,15 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'C++', level: '85%' },
         { name: 'C', level: '75%' },
         { name: 'Java', level: '80%' },
-        { name: 'Python', level: '80%' }
+        { name: 'Python', level: '80%' },
+        { name : 'React.js', level: '65%' },
+        { name : 'C#', level: '25%' }
     ];
-
     const projectsData = [
-        { title: "Multiple Choice Questions Quiz", description: "A thrilling quiz to test your wits and knowledge of web-development, cybersecurity, etc.", liveUrl: "#", githubUrl: "#" },
-        { title: "Carbon Dioxide Emission Tracker", description: "A CO2 emission tracker tracking CO2 emissions from vehicles, homes, etc. from all across Mumbai", liveUrl: "#", githubUrl: "#" },
-        { title: "All-in-One Calculator", description: "A scientific-calculator and unit converter smashed into one clean website. Convert length,weight,money,energy,time and much more on the go", liveUrl: "#", githubUrl: "#" }
+        { title: "Expense Tracker and Predictor", description: "Used Python (sklearn : linear regression, pandas, tkinter, sqlite3, matplotlib, seaborn, numpy) to collaborate in making an expense tracker that records expenditure amount, date and category of expense, using the user input data predicts expense of the next month.", githubUrl: "https://github.com/logicneuron0/Python_expense_tracker" },
+        { title: "Jharkhand Tourism Promotion", description: "Used React.js, made a prototype landing page to promote tourism in Jharkhand. Responsive, creative cursor in PC", githubUrl: "https://github.com/dhruv1946/jharkhand-prototype" },
+        { title: "Clock-out landing page", description: "Used React.js, collaborated in developing a landing page for DJSCE SIGAI flagship event. Responsive", githubUrl: "https://github.com/sigai-tech/clockout_landing_pg" }
     ];
-
     skillsData.forEach(skill => {
         skillsContainer.innerHTML += `
         <div class="card">
@@ -66,20 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         `;
     });
-
     projectsData.forEach(project => {
         projectsContainer.innerHTML += `
         <div class="card">
             <h3>${project.title}</h3>
             <p>${project.description}</p>
             <div style="display: flex; gap: 1rem;">
-                <a href="${project.liveUrl}">Live Demo</a>
                 <a href="${project.githubUrl}">Github</a>
             </div>
         </div>
         `;
     });
-    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -91,9 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, { threshold: 0.5 });
-
-    document.querySelectorAll('#skills-container .card').forEach(card => {
+     document.querySelectorAll('#skills-container .card').forEach(card => {
         observer.observe(card);
     });
-
 });
